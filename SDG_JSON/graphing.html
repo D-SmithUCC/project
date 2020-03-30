@@ -1,0 +1,66 @@
+
+<html>
+
+    <head>
+        <script src="SDG_JSON.js"></script>
+    </head>
+
+    <body>
+        <h1>See my data</h1>
+        <div id="mydata"></div>
+        
+        <canvas id="myCanvas" width="800" height="400" style="border:1px solid #d3d3d3;"></canvas>
+        
+     
+    </body>
+   
+   
+    
+    <script>
+        
+        
+        drawChallenge()
+        
+
+                
+        function drawChallenge() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.font = "20px Arial";
+            mycolors= ['red', 'blue', 'orange', 'yellow', 'green', 'pink']
+            mynames= ['Namibia', 'Malawi', 'Zambia', 'Lesotho', 'South Africa', 'Uganda']
+            thenums= [800, 700, 600, 500, 400, 300]
+            
+            
+            BarY= 15
+            BarY2= 50
+            textY= 35
+            Yinc= 60
+            //ctx.font= '30px arial';
+            
+            for (i=0; i<thenums.length; i++) {
+                ctx.fillStyle = mycolors[i];
+                ctx.fillRect(10, BarY, thenums[i],50);
+                ctx.fillStyle = 'white';
+                ctx.fillText(mynames[i],15, BarY2) ;
+                BarY= BarY + Yinc;
+                textY= textY + Yinc;
+                BarY2= BarY2+ Yinc;
+                
+            }
+            
+        }
+        
+        
+        
+        
+    </script>
+            
+            
+     
+        
+
+
+
+
+</html>

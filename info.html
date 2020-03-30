@@ -1,0 +1,457 @@
+<html>
+
+    <head>
+        <link href="sgd.css" rel= 'stylesheet'>
+        <script src="SDG_JSON.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    </head>
+
+    <body>
+        
+        
+        <div class="topnav">
+            <a  href="index.html">Home</a>
+            <a class="active" href="info.html">Further Information</a>
+            <a href="donate.html">Donate</a>
+            <a id='no' href='https://sustainabledevelopment.un.org/?menu=1300'>
+            <img src='downlldkoad (1).jpg' alt='There was an issue loading this image.'>
+            </a>
+           
+        </div>
+        
+        <div id=UN>
+        <p class=UN >UN</p>
+        </div>
+        
+        <div id= sdg>
+         <p class=texto>SDG 4:<br> Quality<br>Education </p>
+        </div>
+        
+        <div class='filler'></div>
+        
+        <div class='probs'>
+        <p> With issues as big and important as world education, it can be easy to lose sight of important elements and get lost within the magnitude of the problem. For example, the literacy rate for the world population is around 86%. That might sound like a lot, until you realize that in a room of ten people randomly taken across the globe, chances are at least on of them won't know how to read and write. Below are some of the statistics that I have found most striking.  </p>
+        </div>
+       
+    
+        
+   
+        <div class='box'>
+        <div class='describe'><p>This is a graph of bothsex primary children's literacy rate (which apparantly is supposed to give a close compairason to the adult population) in the US year to year since 2003. As you can see, the differences are realitevly minor from year to year; it doesn't seem as though the US has been doing much to improve it's child education system for some time.</p></div>
+        <canvas id="myCanvas" width="1000" height="400"> </canvas>
+        </div>
+        
+        <div class='box'>
+        <div class='describe'><p>This is a graph, made with the same data as the previous one, except with Canada as the focus point. While the difference year to year doesn't change very much in Canada either, our baseline numbers are actually much higher, which seems to imply a better basic education system for young people. At the end of the day though, neither Canada made very much in the way of positive improvement from 2003 to 2015 in this area. I've heard a lot in recent years about how far China has come since the 20th century, let's see if that tranlates into this statistic, or if China even looks as though it might overtake the US here at some point. Becuase this is a child based statistic that will translate into the next generation of workers, this could be sigificant on the world stage at some point in the future. </p></div>
+        <canvas id="myCanvas2" width="1000" height="400"> </canvas>
+        </div>
+        
+        <div class='box'>
+        <div class='describe'><p>Finally, this is graph representing the same data as the previous two, but this time we're comparing China. Oddly enough, it seemed like China had an incredibly good few years of schooling towards 2009, where 95% of their population was able literate in one of China's national languages. Compared to Canada and the US, that's a totally alien stat, 5% higher than anyting Canada achieved during the time period that I have data for. That being said though, China dropped off after 2009 to levels more consistant with our other countries. I haven't done the reasearch, but I'd bet that something major happened sometime between 2009 and 2015 to cause that drop. Anyways though, it is an interesting fact, and no doubt a variety of facinating information could be minded from this data. </p></div>
+        <canvas id="myCanvas3" width="1000" height="400"> </canvas>
+        </div>
+        
+        
+        
+        
+         <div class='box'>
+        <div class='describe'><p> The last thing you will find on this page, (and my favourite) is this little interactive graph at the bottom. Here, you can compare a varitey of countries on a very specific range of data and see how they interact. If you want to re-draw the graph with different information, you can just you the 'wipe canvas' tool so that you can go back and do it again. See what you can find!</p></div>
+        
+        
+        <button class='button'id='clear' onclick='clearcan'>Wipe Canvas</button>
+        
+        <div id='seperator'></div>
+        
+        <div class='fl'>
+        <button class='button'id='cbutton1'>Draw Bar 1</button>
+        Bar #1
+        <select class='custom-select'id=s1>
+        <option  value='23.37721' > Nambia </option>
+        <option  value= '25.76982'> Malawi</option>
+        <option  value= '28.82465'> Zambia</option>
+        <option  value= '34.13465'> Lesotho</option>
+        <option  value= '47.74291'> South Africa</option>
+        <option  value= '61.18414'> Uganda</option>
+        <option  value= '63.04627'> Niger</option>
+        <option  value= '70.89971'> Botswana</option>
+        <option  value= '74.53136'> United Republic of Tanzania </option>
+        <option  value= '77.57188'> Seychelles</option>
+        <option  value= '77.96707'> Eswatini</option>
+        <option  value= '79.43253'> Mauritius</option>
+        </select>
+        </div>
+        
+        <div class='fl'>
+        <button class='button'id='cbutton2'>Draw Bar 2</button>
+        Bar #2
+        <select class='custom-select' id=s2>
+        <option  value='23.37721' > Nambia </option>
+        <option  value= '25.76982'> Malawi</option>
+        <option  value= '28.82465'> Zambia</option>
+        <option  value= '34.13465'> Lesotho</option>
+        <option  value= '47.74291'> South Africa</option>
+        <option  value= '61.18414'> Uganda</option>
+        <option  value= '63.04627'> Niger</option>
+        <option  value= '70.89971'> Botswana</option>
+        <option  value= '74.53136'> United Republic of Tanzania </option>
+        <option  value= '77.57188'> Seychelles</option>
+        <option  value= '77.96707'> Eswatini</option>
+        <option  value= '79.43253'> Mauritius</option>
+        </select>
+        </div>
+        
+        <div class='fl'>
+        <button class='button'id='cbutton3'>Draw Bar 3</button>
+        Bar#3
+        <select class='custom-select' id=s3>
+        <option  value='23.37721' > Nambia </option>
+        <option  value= '25.76982'> Malawi</option>
+        <option  value= '28.82465'> Zambia</option>
+        <option  value= '34.13465'> Lesotho</option>
+        <option  value= '47.74291'> South Africa</option>
+        <option  value= '61.18414'> Uganda</option>
+        <option  value= '63.04627'> Niger</option>
+        <option  value= '70.89971'> Botswana</option>
+        <option  value= '74.53136'> United Republic of Tanzania </option>
+        <option  value= '77.57188'> Seychelles</option>
+        <option  value= '77.96707'> Eswatini</option>
+        <option  value= '79.43253'> Mauritius</option>
+        </select>
+        </div>
+        
+        <div class='fl'>
+        <button class='button'id='cbutton4'>Draw Bar 4</button>
+        Bar#4
+        <select class='custom-select' id=s4>
+        <option  value='23.37721' > Nambia </option>
+        <option  value= '25.76982'> Malawi</option>
+        <option  value= '28.82465'> Zambia</option>
+        <option  value= '34.13465'> Lesotho</option>
+        <option  value= '47.74291'> South Africa</option>
+        <option  value= '61.18414'> Uganda</option>
+        <option  value= '63.04627'> Niger</option>
+        <option  value= '70.89971'> Botswana</option>
+        <option  value= '74.53136'> United Republic of Tanzania </option>
+        <option  value= '77.57188'> Seychelles</option>
+        <option  value= '77.96707'> Eswatini</option>
+        <option  value= '79.43253'> Mauritius</option>
+        </select>
+        </div>
+        
+        <div class='fl'>
+        <button class='button'id='cbutton5'>Draw Bar 5</button>
+        Bar#5
+        <select class='custom-select' id=s5>
+        <option  value='23.37721' > Nambia </option>
+        <option  value= '25.76982'> Malawi</option>
+        <option  value= '28.82465'> Zambia</option>
+        <option  value= '34.13465'> Lesotho</option>
+        <option  value= '47.74291'> South Africa</option>
+        <option  value= '61.18414'> Uganda</option>
+        <option  value= '63.04627'> Niger</option>
+        <option  value= '70.89971'> Botswana</option>
+        <option  value= '74.53136'> United Republic of Tanzania </option>
+        <option  value= '77.57188'> Seychelles</option>
+        <option  value= '77.96707'> Eswatini</option>
+        <option  value= '79.43253'> Mauritius</option>
+        </select>
+        </div>
+        
+        <div class='fl'>
+        <button class='button'id='cbutton6'>Draw Bar 6</button>
+        Bar#6
+        <select class='custom-select' id=s6 >
+        <option  value='23.37721' > Nambia </option>
+        <option  value= '25.76982'> Malawi</option>
+        <option  value= '28.82465'> Zambia</option>
+        <option  value= '34.13465'> Lesotho</option>
+        <option  value= '47.74291'> South Africa</option>
+        <option  value= '61.18414'> Uganda</option>
+        <option  value= '63.04627'> Niger</option>
+        <option  value= '70.89971'> Botswana</option>
+        <option  value= '74.53136'> United Republic of Tanzania </option>
+        <option  value= '77.57188'> Seychelles</option>
+        <option  value= '77.96707'> Eswatini</option>
+        <option  value= '79.43253'> Mauritius</option>
+        </select>
+        </div>
+        
+     
+        <canvas id='ccanvas' width="1000" height="400"></canvas>
+        
+        
+    </body>
+    
+    <script>
+            BarY= 15
+            BarY2= 50
+            textY= 35
+            Yinc= 60
+        
+        
+         function draw() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.font = "20px Arial";
+            mycolors= ['red', 'blue', 'orange', 'yellow', 'green', 'pink']
+            years=[2003, 2009, 2012, 2015 ]
+            vals= [80.61466, 82.38171, 83.39592, 81.00955]
+            
+          
+        for (i=0; i<years.length; i++) {
+                ctx.fillStyle = mycolors[i];
+                ctx.fillRect(10, BarY, vals[i]*10,50);
+                ctx.fillStyle = 'black';
+                ctx.fillText('literacy rate ' + years[i]+ " " + vals[i] ,15, BarY2);
+                BarY= BarY + Yinc;
+                textY= textY + Yinc;
+                BarY2= BarY2+ Yinc;
+            
+            
+        }
+             
+            
+             
+            
+    }
+         draw()
+        
+            BarY= 15
+            BarY2= 50
+            textY= 35
+            Yinc= 60
+            
+        function draw2() {
+            var d = document.getElementById("myCanvas2");
+            var dtx = d.getContext("2d");
+            dtx.font = "20px Arial";
+            mycolors2= ['red', 'blue', 'orange', 'yellow', 'green', 'pink']
+            years2=[2003, 2006, 2009, 2012 ];
+            vals2= [90.46056, 89.04412, 89.71092, 89.31843];
+            
+          
+        for (i=0; i<years2.length; i++) {
+                dtx.fillStyle = mycolors2[i];
+                dtx.fillRect(10, BarY, vals2[i]*10,50);
+                dtx.fillStyle = 'black';
+                dtx.fillText('literacy rate ' + years2[i]+ " " + vals2[i] ,15, BarY2);
+                BarY= BarY + Yinc;
+                textY= textY + Yinc;
+                BarY2= BarY2+ Yinc;
+    
+                
+       
+            }
+            
+        }
+        
+        draw2()
+        
+        
+            BarY= 15
+            BarY2= 50
+            textY= 35
+            Yinc= 60
+            
+        function draw3() {
+            var e = document.getElementById("myCanvas3");
+            var etx = e.getContext("2d");
+            etx.font = "20px Arial";
+            mycolors3= ['red', 'blue', 'orange', 'yellow', 'green', 'pink']
+            years3=[2009, 2015, 2016 ]
+            vals3= [95.94515, 78.11458, 79.6]
+            
+        
+            
+          
+        for (i=0; i<years3.length; i++) {
+                etx.fillStyle = mycolors3[i];
+                etx.fillRect(10, BarY, vals3[i]*10,50);
+                etx.fillStyle = 'black';
+                etx.fillText('literacy rate ' + years3[i]+ " " + vals3[i] ,15, BarY2);
+                BarY= BarY + Yinc;
+                textY= textY + Yinc;
+                BarY2= BarY2+ Yinc;
+    
+                
+       
+            }
+        }
+        
+        mc=['purple']
+        draw3()
+        
+        
+            var cc = document.getElementById("ccanvas");
+            var cctx = cc.getContext("2d");
+            cctx.font = "20px Arial";
+            mycolors2= ['red', 'blue', 'orange', 'yellow', 'green', 'pink']
+            ccyears=[2000];
+            
+        
+        
+       function getSelectedOption(s1) {
+        var opt;
+        for ( i = 0, len = document.getElementById('s1').options.length; i < len; i++ ) {
+            opt = document.getElementById('s1').options[i];
+            if ( opt.selected === true ) {
+                break;
+            }
+        }
+        return opt;
+    }
+        
+        
+        function getSelectedOptionb(s2) {
+        var bpt;
+        for ( i = 0, len = document.getElementById('s2').options.length; i < len; i++ ) {
+            bpt = document.getElementById('s2').options[i];
+            if ( bpt.selected === true ) {
+                break;
+            }
+        }
+        return bpt;
+
+    }
+        
+         function getSelectedOptionc(s3) {
+        var cpt;
+        for ( i = 0, len = document.getElementById('s3').options.length; i < len; i++ ) {
+            cpt = document.getElementById('s3').options[i];
+            if ( cpt.selected === true ) {
+                break;
+            }
+        }
+        return cpt;
+    }
+        
+        function getSelectedOptiond(s4) {
+        var dpt;
+        for ( i = 0, len = document.getElementById('s4').options.length; i < len; i++ ) {
+            dpt = document.getElementById('s4').options[i];
+            if ( dpt.selected === true ) {
+                break;
+            }
+        }
+        return dpt;
+    }
+        
+            
+        
+             
+            
+
+        document.getElementById('cbutton1').onclick = function create1() {
+            opt= getSelectedOption(s1)
+         for (i=0; i<6; i++) {
+                cctx.fillStyle = mycolors2[1];
+                cctx.fillRect(10, 15, opt.value *10,50);
+                cctx.fillStyle = 'black';
+                cctx.fillText('literacy rate in ' + opt.innerHTML + ' year ' + ccyears[0]+ " " + "literacy rate: " + opt.value, 15, 50);
+    }
+            
+}
+        
+        
+        
+          document.getElementById('cbutton2').onclick = function create2() {
+            bpt= getSelectedOptionb(s2)
+         for (i=0; i<6; i++) {
+                cctx.fillStyle = mycolors2[2];
+                cctx.fillRect(10, 75, bpt.value *10,50);
+                cctx.fillStyle = 'black';
+                cctx.fillText('literacy rate in ' + bpt.innerHTML + ' year ' + ccyears[0]+ " " + "literacy rate: " + bpt.value, 15, 105);
+    }
+            
+}
+          
+           document.getElementById('cbutton3').onclick = function create3() {
+            cpt= getSelectedOptionc(s3)
+         for (i=0; i<6; i++) {
+                cctx.fillStyle = mycolors2[3];
+                cctx.fillRect(10, 135, cpt.value *10,50);
+                cctx.fillStyle = 'black';
+                cctx.fillText('literacy rate in ' + cpt.innerHTML + ' year ' + ccyears[0]+ " " + "literacy rate: " + cpt.value, 15, 165);
+    }
+            
+}
+        
+           document.getElementById('cbutton4').onclick = function create4() {
+            dpt= getSelectedOptiond(s4)
+         for (i=0; i<6; i++) {
+                cctx.fillStyle = mycolors2[4];
+                cctx.fillRect(10, 195, dpt.value *10,50);
+                cctx.fillStyle = 'black';
+                cctx.fillText('literacy rate in ' + dpt.innerHTML + ' year ' + ccyears[0]+ " " + "literacy rate: " + dpt.value, 15, 225);
+    }
+            
+}
+        document.getElementById('cbutton5').onclick = function create5() {
+            ept= getSelectedOptione(s5)
+         for (i=0; i<6; i++) {
+                cctx.fillStyle = mycolors2[5];
+                cctx.fillRect(10, 255, ept.value *10,50);
+                cctx.fillStyle = 'black';
+                cctx.fillText('literacy rate in ' + ept.innerHTML + ' year ' + ccyears[0]+ " " + "literacy rate: " + ept.value, 15, 285);
+    }
+            
+}
+        document.getElementById('cbutton6').onclick = function create6() {
+            fpt= getSelectedOptionf(s6)
+         for (i=0; i<6; i++) {
+                cctx.fillStyle = mc[0];
+                cctx.fillRect(10, 315, fpt.value *10,50);
+                cctx.fillStyle = 'black';
+                cctx.fillText('literacy rate in ' + fpt.innerHTML + ' year ' + ccyears[0]+ " " + "literacy rate: " + fpt.value, 15, 345);
+    }
+            
+}
+        
+        
+        function getSelectedOptione(s5) {
+        var ept;
+        for ( i = 0, len = document.getElementById('s5').options.length; i < len; i++ ) {
+            ept = document.getElementById('s5').options[i];
+            if ( ept.selected === true ) {
+                break;
+            }
+        }
+        return ept;
+    }
+        
+        function getSelectedOptionf(s6) {
+        var fpt;
+        for ( i = 0, len = document.getElementById('s6').options.length; i < len; i++ ) {
+            fpt = document.getElementById('s6').options[i];
+            if ( fpt.selected === true ) {
+                break;
+            }
+        }
+        return fpt;
+    }
+        
+        
+        
+     
+        
+        document.getElementById('clear').onclick= function clearcan() {
+         cctx.clearRect(0, 0, 1000, 400);
+
+     }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+    </script>
+    
+</html>
